@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Survey | Park 1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../../css/park1/survey.css">
+</head>
+
+<body>
+
+    <!-- PARK NAVBAR -->
+
+    <header class="park-header">
+
+        <div class="park-nav">
+
+            <a href="../parks.html" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to Parks</span>
+            </a>
+
+            <div class="park-brand">
+
+                <div class="park-logo">
+                    <i class="fa-solid fa-tree"></i>
+                </div>
+
+                <div>
+                    <strong>Park 1</strong>
+                    <span>Public Space Study</span>
+                </div>
+
+            </div>
+
+            <nav class="park-links">
+
+                <a href="park-information.html">
+                    Park Information
+                </a>
+
+                <a href="observations.html">
+                    Field Observations
+                </a>
+
+                <a href="facilities.html">
+                    Facilities
+                </a>
+
+                <a href="survey.html" class="active">
+                    Survey
+                </a>
+
+                <a href="problems-improvements.html">
+                    Problems & Improvements
+                </a>
+
+                <a href="digital-map.html">
+                    Digital Map
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="survey-hero">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">PARK 01 • COMMUNITY SURVEY</p>
+
+                <h1>Visitor Survey</h1>
+
+                <p>
+                    A sample overview of responses collected to
+                    understand how visitors use and experience the park.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SURVEY OVERVIEW -->
+
+        <section class="survey-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">SURVEY OVERVIEW</p>
+
+                <h2>What Visitors Told Us</h2>
+
+                <p>
+                    The following figures are sample data and will
+                    be replaced with the actual survey responses.
+                </p>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <strong>50</strong>
+                    <span>Respondents</span>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <strong>64%</strong>
+                    <span>Regular Visitors</span>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+
+                    <strong>72%</strong>
+                    <span>Satisfied Visitors</span>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+
+                    <strong>68%</strong>
+                    <span>Visit Weekly</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================================
+     SURVEY CHARTS
+===================================================== -->
+
+<section class="charts-section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">SURVEY RESULTS</p>
+
+        <h2>Understanding Visitor Responses</h2>
+
+        <p>
+            Sample results showing how visitors use and experience
+            the selected public space.
+        </p>
+
+    </div>
+
+
+    <div class="charts-grid">
+
+
+        <!-- WHY PEOPLE VISIT -->
+
+        <div class="chart-card">
+
+            <div class="chart-header">
+
+                <div>
+                    <span class="chart-label">VISITOR PURPOSE</span>
+
+                    <h3>Why Do People Visit?</h3>
+                </div>
+
+            </div>
+
+            <div class="chart-container">
+                <canvas id="visitPurposeChart"></canvas>
+            </div>
+
+        </div>
+
+
+        <!-- VISIT FREQUENCY -->
+
+        <div class="chart-card">
+
+            <div class="chart-header">
+
+                <div>
+                    <span class="chart-label">VISIT PATTERN</span>
+
+                    <h3>Visit Frequency</h3>
+                </div>
+
+            </div>
+
+            <div class="chart-container">
+                <canvas id="visitFrequencyChart"></canvas>
+            </div>
+
+        </div>
+
+
+        <!-- FACILITY SATISFACTION -->
+
+        <div class="chart-card chart-wide">
+
+            <div class="chart-header">
+
+                <div>
+                    <span class="chart-label">FACILITIES</span>
+
+                    <h3>Facility Satisfaction</h3>
+                </div>
+
+            </div>
+
+            <div class="chart-container">
+                <canvas id="facilityChart"></canvas>
+            </div>
+
+        </div>
+
+
+        <!-- OVERALL SATISFACTION -->
+
+        <div class="chart-card">
+
+            <div class="chart-header">
+
+                <div>
+                    <span class="chart-label">USER EXPERIENCE</span>
+
+                    <h3>Overall Satisfaction</h3>
+                </div>
+
+            </div>
+
+            <div class="chart-container small-chart">
+                <canvas id="satisfactionChart"></canvas>
+            </div>
+
+        </div>
+
+
+        <!-- COMMON ISSUES -->
+
+        <div class="chart-card">
+
+            <div class="chart-header">
+
+                <div>
+                    <span class="chart-label">FEEDBACK</span>
+
+                    <h3>Common Issues</h3>
+                </div>
+
+            </div>
+
+            <div class="chart-container">
+                <canvas id="issuesChart"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- REASON FOR VISITING -->
+
+        <section class="results-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">VISITOR PATTERNS</p>
+
+                <h2>Why Do People Visit?</h2>
+
+                <p>
+                    Sample distribution of the main reasons visitors
+                    reported for using the park.
+                </p>
+
+            </div>
+
+
+            <div class="results-card">
+
+                <div class="result-row">
+
+                    <div class="result-info">
+                        <span>Walking / Exercise</span>
+                        <strong>36%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width: 36%;"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="result-row">
+
+                    <div class="result-info">
+                        <span>Relaxation</span>
+                        <strong>28%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width: 28%;"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="result-row">
+
+                    <div class="result-info">
+                        <span>Spending Time with Family</span>
+                        <strong>20%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width: 20%;"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="result-row">
+
+                    <div class="result-info">
+                        <span>Children's Activities</span>
+                        <strong>10%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width: 10%;"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="result-row">
+
+                    <div class="result-info">
+                        <span>Other</span>
+                        <strong>6%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width: 6%;"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SATISFACTION -->
+
+        <section class="satisfaction-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">USER EXPERIENCE</p>
+
+                <h2>Visitor Satisfaction</h2>
+
+                <p>
+                    Sample responses showing how visitors rated
+                    their overall experience.
+                </p>
+
+            </div>
+
+
+            <div class="satisfaction-grid">
+
+                <div class="satisfaction-card">
+                    <span class="rating">Excellent</span>
+                    <strong>18</strong>
+                    <small>responses</small>
+                </div>
+
+                <div class="satisfaction-card">
+                    <span class="rating">Good</span>
+                    <strong>18</strong>
+                    <small>responses</small>
+                </div>
+
+                <div class="satisfaction-card">
+                    <span class="rating">Average</span>
+                    <strong>10</strong>
+                    <small>responses</small>
+                </div>
+
+                <div class="satisfaction-card">
+                    <span class="rating">Poor</span>
+                    <strong>4</strong>
+                    <small>responses</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMMON PROBLEMS -->
+
+        <section class="issues-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">SURVEY FEEDBACK</p>
+
+                <h2>Commonly Reported Issues</h2>
+
+                <p>
+                    Sample issues identified from visitor feedback.
+                </p>
+
+            </div>
+
+
+            <div class="issue-grid">
+
+                <div class="issue-card">
+                    <i class="fa-solid fa-trash"></i>
+                    <h3>Waste Management</h3>
+                    <p>
+                        Some visitors reported insufficient waste
+                        bins in certain areas.
+                    </p>
+                </div>
+
+
+                <div class="issue-card">
+                    <i class="fa-solid fa-chair"></i>
+                    <h3>Limited Seating</h3>
+                    <p>
+                        Visitors suggested adding more seating
+                        spaces around the park.
+                    </p>
+                </div>
+
+
+                <div class="issue-card">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>Lighting</h3>
+                    <p>
+                        Some respondents felt that lighting could
+                        be improved in less-used areas.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+    <footer>
+
+        <p>Public Space Usage & Digital Mapping</p>
+
+        <span>Community Engagement Project</span>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../../js/survey.js"></script>
+
+</body>
+
+</html>

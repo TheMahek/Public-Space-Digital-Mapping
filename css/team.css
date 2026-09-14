@@ -1,0 +1,572 @@
+/* =========================================================
+   TEAM PAGE
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f7f7f2;
+    color: #173c2b;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    height: 76px;
+    padding: 0 6%;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e8e2;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    justify-self: start;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e9f0e4;
+
+    color: #28633c;
+}
+
+.logo-text strong {
+    display: block;
+
+    font-size: 15px;
+}
+
+.logo-text span {
+    display: block;
+
+    font-size: 11px;
+
+    color: #758179;
+}
+
+
+/* =========================================================
+   NAV LINKS
+========================================================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+
+    justify-self: center;
+}
+
+.nav-links a {
+    position: relative;
+
+    padding: 28px 2px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #405047;
+
+    transition: color 0.25s ease;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 19px;
+
+    width: 0;
+    height: 2px;
+
+    background: #287043;
+
+    transform: translateX(-50%);
+
+    transition: width 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: #287043;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a.active {
+    color: #287043;
+}
+
+
+/* =========================================================
+   HAMBURGER BUTTON
+========================================================= */
+
+.menu-btn {
+    display: none;
+
+    width: 40px;
+    height: 40px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+
+    border: 1px solid #dfe6dc;
+    border-radius: 8px;
+
+    background: #f7f9f4;
+
+    color: #28633c;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.menu-btn:hover {
+    background: #e9f0e4;
+
+    border-color: #cbdac8;
+}
+
+
+/* =========================================================
+   TEAM HEADER
+========================================================= */
+
+.team-header {
+    padding: 75px 7% 65px;
+
+    text-align: center;
+
+    background: #eaf1e4;
+}
+
+.eyebrow {
+    margin-bottom: 8px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #63826b;
+}
+
+.team-header h1 {
+    margin-bottom: 12px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 44px;
+
+    color: #173d2b;
+}
+
+.team-header p:last-child {
+    max-width: 520px;
+
+    margin: auto;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #69776f;
+}
+
+
+/* =========================================================
+   TEAM SECTION
+========================================================= */
+
+.team-section {
+    padding: 70px 7%;
+}
+
+.team-grid {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.team-card {
+    padding: 28px 18px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e6df;
+
+    border-radius: 9px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #cbdac8;
+
+    box-shadow: 0 14px 30px rgba(25, 70, 45, 0.11);
+}
+
+
+/* MEMBER ICON */
+
+.member-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e8f0e5;
+
+    color: #4d7957;
+
+    font-size: 22px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.team-card:hover .member-icon {
+    transform: scale(1.08);
+
+    background: #dcead9;
+}
+
+
+/* MEMBER TEXT */
+
+.team-card h2 {
+    margin-bottom: 5px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 17px;
+
+    color: #2c5039;
+}
+
+.team-card span {
+    display: block;
+
+    margin-bottom: 14px;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    color: #63826b;
+}
+
+.team-card p {
+    font-size: 9px;
+
+    line-height: 1.7;
+
+    color: #748078;
+}
+
+
+/* =========================================================
+   CONTRIBUTION
+========================================================= */
+
+.contribution-section {
+    padding: 70px 7%;
+
+    background: #ffffff;
+}
+
+.contribution-content {
+    max-width: 720px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.contribution-content h2 {
+    margin-bottom: 15px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    color: #193e2c;
+}
+
+.contribution-content > p:last-child {
+    font-size: 11px;
+
+    line-height: 1.9;
+
+    color: #718078;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 18px 6%;
+
+    text-align: center;
+
+    background: #153b2b;
+
+    color: #d9e5da;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        position: relative;
+
+        height: 70px;
+
+        padding: 0 5%;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .logo-text strong {
+        font-size: 12px;
+    }
+
+    .logo-text span {
+        font-size: 9px;
+    }
+
+
+    /* HAMBURGER */
+
+    .menu-btn {
+        display: flex;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =====================================================
+       MOBILE DROPDOWN
+    ====================================================== */
+
+    .nav-links {
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+        right: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content: flex-start;
+
+        gap: 0;
+
+        padding: 8px 5% 10px;
+
+        background: #ffffff;
+
+        border-top: 1px solid #e5e8e2;
+
+        box-shadow: 0 10px 25px rgba(25, 60, 43, 0.10);
+
+        z-index: 1000;
+    }
+
+
+    .nav-links.show {
+        display: flex;
+    }
+
+
+    .nav-links a {
+        width: 100%;
+
+        padding: 14px 0;
+
+        font-size: 11px;
+
+        border-bottom: 1px solid #edf0eb;
+    }
+
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+
+    .nav-links a::after {
+        display: none;
+    }
+
+
+    .nav-links a.active {
+        color: #287043;
+    }
+
+
+    /* =====================================================
+       TEAM HEADER
+    ====================================================== */
+
+    .team-header {
+        padding: 60px 6%;
+    }
+
+    .team-header h1 {
+        font-size: 36px;
+    }
+
+
+    /* =====================================================
+       TEAM
+    ====================================================== */
+
+    .team-section {
+        padding: 55px 6%;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .logo-text strong {
+        font-size: 11px;
+    }
+
+    .logo-text span {
+        font-size: 8px;
+    }
+
+    .menu-btn {
+        width: 36px;
+        height: 36px;
+
+        font-size: 15px;
+    }
+
+}
