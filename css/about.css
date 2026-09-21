@@ -1,0 +1,1264 @@
+/* =========================================================
+   PUBLIC SPACE USAGE & DIGITAL MAPPING
+   ABOUT PAGE
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f7f6ef;
+    color: #193c2c;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    width: 100%;
+    height: 76px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    padding: 0 5%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e4e8df;
+
+    position: relative;
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    justify-self: start;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e9f1e5;
+
+    color: #287044;
+
+    font-size: 18px;
+}
+
+.logo-text h2 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+
+    color: #193c2c;
+}
+
+.logo-text span {
+    display: block;
+
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #748178;
+}
+
+
+/* NAVIGATION */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.nav-links a {
+    position: relative;
+
+    padding: 28px 0;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #4c5c53;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #287044;
+}
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 20px;
+
+    width: 100%;
+    height: 2px;
+
+    background: #287044;
+
+    border-radius: 10px;
+}
+
+
+/* MENU BUTTON */
+
+.menu-btn {
+    display: none;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #edf3e8;
+
+    color: #285e3b;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    justify-self: end;
+}
+
+
+/* =========================================================
+   ABOUT HERO
+========================================================= */
+
+.about-hero {
+    min-height: 455px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 75px 10%;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            110deg,
+            #e8efdf 0%,
+            #f5f5e9 55%,
+            #dcebdc 100%
+        );
+}
+
+
+/* decorative circles */
+
+.about-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    right: -130px;
+    top: -170px;
+
+    border-radius: 50%;
+
+    background: rgba(112, 150, 112, 0.12);
+}
+
+.about-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: 16%;
+    bottom: -180px;
+
+    border-radius: 50%;
+
+    border: 35px solid rgba(255, 255, 255, 0.35);
+}
+
+.about-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 760px;
+}
+
+
+/* small label */
+
+.page-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2.2px;
+
+    color: #557a5f;
+}
+
+.page-label::before {
+    content: "";
+
+    width: 28px;
+    height: 2px;
+
+    background: #5f8a69;
+}
+
+
+/* heading */
+
+.about-hero h1 {
+    max-width: 750px;
+
+    margin-bottom: 22px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(46px, 5.5vw, 70px);
+
+    line-height: 1.02;
+
+    letter-spacing: -1.5px;
+
+    color: #173a29;
+}
+
+.about-hero h1 span {
+    color: #2c7045;
+}
+
+
+/* description */
+
+.about-hero-content > p:last-child {
+    max-width: 620px;
+
+    font-size: 14px;
+
+    line-height: 1.85;
+
+    color: #637169;
+}
+
+
+/* =========================================================
+   COMMON SECTION TITLE
+========================================================= */
+
+.section-title {
+    max-width: 700px;
+
+    margin: 0 auto 48px;
+
+    text-align: center;
+}
+
+.section-label {
+    margin-bottom: 10px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #63866c;
+}
+
+.section-title h2 {
+    margin-bottom: 12px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 36px;
+
+    line-height: 1.15;
+
+    color: #193d2c;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.introduction {
+    padding: 100px 7%;
+
+    background: #ffffff;
+}
+
+.intro-layout {
+    max-width: 1080px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.45fr 0.75fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* text */
+
+.intro-text {
+    position: relative;
+
+    padding-left: 25px;
+}
+
+.intro-text::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 4px;
+
+    width: 3px;
+    height: 90px;
+
+    border-radius: 10px;
+
+    background: #76a07e;
+}
+
+.intro-text p {
+    margin-bottom: 18px;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: #68766e;
+}
+
+.intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* focus box */
+
+.intro-box {
+    position: relative;
+
+    padding: 40px 32px;
+
+    background: #edf3e8;
+
+    border: 1px solid #dce7d8;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.intro-box::after {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    right: -55px;
+    bottom: -65px;
+
+    border-radius: 50%;
+
+    background: rgba(90, 132, 96, 0.10);
+}
+
+.intro-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #2c7045;
+
+    font-size: 20px;
+
+    box-shadow: 0 5px 15px rgba(38, 75, 51, 0.08);
+}
+
+.intro-box h3 {
+    margin-bottom: 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    color: #214331;
+}
+
+.intro-box p {
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 12px;
+
+    line-height: 1.75;
+
+    color: #68766e;
+}
+
+
+/* =========================================================
+   OBJECTIVES
+========================================================= */
+
+.objectives {
+    padding: 100px 7%;
+
+    background: #f7f6ef;
+}
+
+.objective-grid {
+    max-width: 1080px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.objective-card {
+    position: relative;
+
+    min-height: 275px;
+
+    padding: 32px 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e7df;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.objective-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 35px rgba(32, 67, 47, 0.10);
+}
+
+
+/* number */
+
+.objective-card > span {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #a3b3a5;
+}
+
+
+/* icon */
+
+.objective-icon {
+    width: 50px;
+    height: 50px;
+
+    margin-bottom: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #edf3e8;
+
+    color: #2c7045;
+
+    font-size: 18px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.objective-card:hover .objective-icon {
+    background: #2c7045;
+
+    color: #ffffff;
+}
+
+
+/* text */
+
+.objective-card h3 {
+    margin-bottom: 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+
+    color: #244532;
+}
+
+.objective-card p {
+    font-size: 11px;
+
+    line-height: 1.75;
+
+    color: #718078;
+}
+
+
+/* =========================================================
+   METHODOLOGY
+========================================================= */
+
+.methodology {
+    padding: 100px 7%;
+
+    background: #ffffff;
+}
+
+.method-grid {
+    max-width: 1080px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.method-card {
+    position: relative;
+
+    min-height: 235px;
+
+    padding: 30px;
+
+    background: #f8f8f3;
+
+    border: 1px solid #e3e7df;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.method-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 14px 28px rgba(32, 67, 47, 0.08);
+}
+
+
+/* top line */
+
+.method-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #78a180;
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: transform 0.25s ease;
+}
+
+.method-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* number */
+
+.method-number {
+    margin-bottom: 18px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #8aa08e;
+}
+
+
+/* icon */
+
+.method-card > i {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 21px;
+
+    color: #2c7045;
+}
+
+.method-card h3 {
+    margin-bottom: 8px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+
+    color: #244532;
+}
+
+.method-card p {
+    font-size: 11px;
+
+    line-height: 1.75;
+
+    color: #718078;
+}
+
+
+/* =========================================================
+   FIELD STUDY
+========================================================= */
+
+.study {
+    padding: 100px 7%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf1e2,
+            #f3f5ea
+        );
+}
+
+.study-grid {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.study-item {
+    min-height: 205px;
+
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    border: 1px solid rgba(210, 222, 208, 0.9);
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.study-item:hover {
+    transform: translateY(-5px);
+
+    background: #ffffff;
+}
+
+.study-item i {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e8f0e4;
+
+    color: #2c7045;
+
+    font-size: 17px;
+}
+
+.study-item h3 {
+    margin-bottom: 8px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 19px;
+
+    color: #244532;
+}
+
+.study-item p {
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    color: #718078;
+}
+
+
+/* =========================================================
+   PROJECT OUTCOME
+========================================================= */
+
+.outcome {
+    position: relative;
+
+    padding: 105px 7%;
+
+    overflow: hidden;
+
+    background: #f7f6ef;
+
+    text-align: center;
+}
+
+.outcome::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    left: -160px;
+    top: -150px;
+
+    border-radius: 50%;
+
+    background: #e7efe1;
+}
+
+.outcome::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -100px;
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background: #e7efe1;
+}
+
+.outcome-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 680px;
+
+    margin: auto;
+}
+
+.outcome h2 {
+    margin-bottom: 18px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    color: #193d2c;
+}
+
+.outcome-content > p:not(.section-label) {
+    max-width: 580px;
+
+    margin: 0 auto 28px;
+
+    font-size: 13px;
+
+    line-height: 1.85;
+
+    color: #68766e;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.primary-btn {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 13px 21px;
+
+    border-radius: 5px;
+
+    background: #287143;
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+    background: #1e5b35;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 18px rgba(40, 113, 67, 0.18);
+}
+
+.primary-btn i {
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 19px 5%;
+
+    background: #153a2a;
+
+    color: #dce7dd;
+}
+
+.footer-content {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-brand {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.footer-text {
+    font-size: 10px;
+
+    color: #b9cbbd;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        gap: 22px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .objective-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .study-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intro-layout {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .intro-box {
+        max-width: 500px;
+
+        margin: auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        height: 70px;
+
+        display: flex;
+        align-items: center;
+
+        padding: 0 5%;
+    }
+
+    .menu-btn {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        margin-left: auto;
+    }
+
+
+    /* mobile menu */
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 10px 5%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        background: #ffffff;
+
+        border-top: 1px solid #e5e8e2;
+
+        box-shadow: 0 12px 25px rgba(25, 60, 43, 0.10);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 14px 0;
+
+        font-size: 12px;
+
+        border-bottom: 1px solid #edf0eb;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a.active::after {
+        display: none;
+    }
+
+
+    /* hero */
+
+    .about-hero {
+        min-height: 390px;
+
+        padding: 65px 7%;
+    }
+
+    .about-hero h1 {
+        font-size: 44px;
+    }
+
+
+    /* sections */
+
+    .introduction,
+    .objectives,
+    .methodology,
+    .study {
+        padding: 75px 6%;
+    }
+
+
+    .objective-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .method-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .study-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+
+        font-size: 15px;
+    }
+
+    .logo-text h2 {
+        font-size: 13px;
+
+        line-height: 15px;
+    }
+
+    .logo-text span {
+        font-size: 10px;
+
+        line-height: 12px;
+    }
+
+
+    .about-hero {
+        min-height: 360px;
+
+        padding: 55px 7%;
+    }
+
+    .about-hero h1 {
+        font-size: 36px;
+
+        letter-spacing: -0.5px;
+    }
+
+    .about-hero-content > p:last-child {
+        font-size: 12px;
+    }
+
+
+    .section-title {
+        margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+        font-size: 29px;
+    }
+
+
+    .intro-text {
+        padding-left: 18px;
+    }
+
+    .intro-text p {
+        font-size: 12px;
+    }
+
+
+    .objective-card {
+        min-height: auto;
+
+        padding: 28px 22px;
+    }
+
+
+    .method-card {
+        min-height: auto;
+
+        padding: 27px 23px;
+    }
+
+
+    .outcome {
+        padding: 75px 7%;
+    }
+
+    .outcome h2 {
+        font-size: 32px;
+    }
+
+
+    .footer-content {
+        flex-direction: column;
+
+        gap: 7px;
+
+        text-align: center;
+    }
+}
+
+/* =========================================================
+   CONCLUSION
+========================================================= */
+
+.conclusion-section {
+    padding: 75px 7%;
+    background: #eaf1e4;
+}
+
+.conclusion-content {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+}
+
+.conclusion-content .eyebrow {
+    margin-bottom: 8px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: #63826b;
+}
+
+.conclusion-content h2 {
+    margin-bottom: 18px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+
+    color: #193e2c;
+}
+
+.conclusion-content p:not(.eyebrow) {
+    margin-bottom: 12px;
+
+    font-size: 11px;
+    line-height: 1.9;
+
+    color: #68766e;
+}
+
+.conclusion-content p:last-child {
+    margin-bottom: 0;
+}

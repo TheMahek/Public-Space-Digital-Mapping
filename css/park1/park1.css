@@ -1,0 +1,925 @@
+/* =========================================================
+   PARK 1
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f7f8f3;
+    color: #173c2b;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   PARK HEADER
+========================================================= */
+
+.park-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e3e8df;
+
+    box-shadow: 0 3px 15px rgba(26, 59, 42, 0.06);
+}
+
+.park-nav {
+    max-width: 1400px;
+    min-height: 78px;
+
+    margin: auto;
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    padding: 9px 13px;
+
+    border: 1px solid #dfe6dc;
+    border-radius: 7px;
+
+    color: #55705d;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.back-link i {
+    font-size: 10px;
+}
+
+.back-link:hover {
+    background: #edf3e9;
+    border-color: #cbd9c8;
+    color: #285d3b;
+}
+
+
+/* =========================================================
+   PARK BRAND
+========================================================= */
+
+.park-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    flex-shrink: 0;
+}
+
+.park-logo {
+    width: 39px;
+    height: 39px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e9f0e5;
+    color: #326544;
+
+    font-size: 16px;
+}
+
+.park-brand strong {
+    display: block;
+
+    font-size: 13px;
+    line-height: 1.2;
+
+    color: #173c2b;
+}
+
+.park-brand span {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 9px;
+
+    color: #78847c;
+}
+
+
+/* =========================================================
+   PARK NAVIGATION
+========================================================= */
+
+.park-links {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.park-links a {
+    position: relative;
+
+    padding: 29px 10px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #526158;
+
+    white-space: nowrap;
+
+    transition: color 0.25s ease;
+}
+
+.park-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 19px;
+
+    width: 0;
+    height: 2px;
+
+    background: #347048;
+
+    transform: translateX(-50%);
+
+    transition: width 0.25s ease;
+}
+
+.park-links a:hover {
+    color: #2e6942;
+}
+
+.park-links a:hover::after {
+    width: 75%;
+}
+
+
+/* =========================================================
+   PARK HERO
+========================================================= */
+
+.park-hero {
+    min-height: 490px;
+
+    padding: 75px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    background: #eaf1e4;
+}
+
+.hero-content {
+    max-width: 570px;
+}
+
+.eyebrow {
+    margin-bottom: 10px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #64806b;
+}
+
+.hero-content h1 {
+    margin-bottom: 13px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 5vw, 70px);
+
+    line-height: 1.05;
+
+    color: #173f2d;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 22px;
+
+    color: #55735e;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.location i {
+    color: #4c7959;
+}
+
+.hero-description {
+    max-width: 510px;
+
+    margin-bottom: 28px;
+
+    color: #68786e;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   EXPLORE BUTTON
+========================================================= */
+
+.explore-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 13px 20px;
+
+    border-radius: 7px;
+
+    background: #245b3a;
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.explore-btn:hover {
+    background: #19492d;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 18px rgba(35, 81, 51, 0.18);
+}
+
+.explore-btn i {
+    font-size: 10px;
+
+    transition: transform 0.25s ease;
+}
+
+.explore-btn:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-image {
+    position: relative;
+
+    width: 100%;
+    max-width: 580px;
+
+    margin-left: auto;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    box-shadow: 0 18px 40px rgba(33, 62, 43, 0.13);
+}
+
+.hero-image img {
+    height: 350px;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.025);
+}
+
+.image-label {
+    position: absolute;
+
+    left: 18px;
+    bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    color: #315d40;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PARK OVERVIEW
+========================================================= */
+
+.park-overview {
+    padding: 85px 7%;
+
+    background: #ffffff;
+}
+
+.section-heading {
+    max-width: 650px;
+
+    margin: 0 auto 48px;
+
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-bottom: 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 36px;
+
+    line-height: 1.2;
+
+    color: #193f2d;
+}
+
+.section-heading p:last-child {
+    color: #718078;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   OVERVIEW GRID
+========================================================= */
+
+/* =========================================================
+   STUDY SECTIONS
+========================================================= */
+
+.sections-section {
+    padding: 95px 7%;
+
+    background: #f7f8f3;
+}
+
+.overview-grid {
+    max-width: 1100px;
+
+    margin: 48px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   STUDY CARD
+========================================================= */
+
+.study-card {
+    position: relative;
+
+    min-height: 285px;
+
+    padding: 29px 25px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e0e6de;
+
+    border-radius: 12px;
+
+    transition: all 0.3s ease;
+}
+
+.study-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 3px;
+    height: 0;
+
+    background: #477554;
+
+    transition: height 0.3s ease;
+}
+
+.study-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #d2ddd0;
+
+    box-shadow: 0 14px 30px rgba(35, 70, 45, 0.09);
+}
+
+.study-card:hover::before {
+    height: 100%;
+}
+
+
+/* CARD ICON */
+
+.card-icon {
+    width: 45px;
+    height: 45px;
+
+    margin-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eaf1e4;
+
+    color: #477554;
+
+    transition: all 0.3s ease;
+}
+
+.study-card:hover .card-icon {
+    background: #dfeade;
+
+    transform: scale(1.05);
+}
+
+
+/* CARD NUMBER */
+
+.card-number {
+    position: absolute;
+
+    top: 24px;
+    right: 24px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+
+    color: #d6ded4;
+}
+
+.study-card h3 {
+    margin-bottom: 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+
+    color: #294d38;
+}
+
+.study-card > p {
+    min-height: 55px;
+
+    margin-bottom: 22px;
+
+    font-size: 10px;
+
+    line-height: 1.75;
+
+    color: #718078;
+}
+
+
+/* CARD LINK */
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    color: #477554;
+}
+
+.card-link i {
+    transition: transform 0.25s ease;
+}
+
+.study-card:hover .card-link i {
+    transform: translateX(4px);
+}
+
+
+
+
+/* =========================================================
+   APPROACH
+========================================================= */
+
+.approach-section {
+    padding: 90px 7%;
+
+    background: #eaf1e4;
+}
+
+.approach-container {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.approach-content h2 {
+    margin-bottom: 15px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 37px;
+
+    color: #193f2d;
+}
+
+.approach-content > p:last-child {
+    max-width: 450px;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    color: #68786e;
+}
+
+
+/* =========================================================
+   APPROACH STEPS
+========================================================= */
+
+.approach-steps {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 13px;
+}
+
+.approach-step {
+    padding: 21px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5d9;
+
+    border-radius: 10px;
+
+    transition: all 0.25s ease;
+}
+
+.approach-step:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(35, 70, 45, 0.07);
+}
+
+.approach-step > span {
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+
+    color: #9baa9d;
+}
+
+.approach-step strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 11px;
+
+    color: #365d43;
+}
+
+.approach-step p {
+    font-size: 9px;
+
+    line-height: 1.6;
+
+    color: #718078;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 24px 6%;
+
+    text-align: center;
+
+    background: #173b2b;
+
+    color: #dce7dd;
+}
+
+footer p {
+    margin-bottom: 3px;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+footer span {
+    font-size: 9px;
+
+    color: #aebfb1;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .park-nav {
+        gap: 18px;
+
+        padding: 0 3%;
+    }
+
+    .park-links {
+        gap: 0;
+    }
+
+    .park-links a {
+        padding-left: 7px;
+        padding-right: 7px;
+
+        font-size: 10px;
+    }
+
+    .park-hero {
+        padding: 65px 6%;
+
+        gap: 40px;
+    }
+
+    .overview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .park-nav {
+        min-height: auto;
+
+        padding: 12px 5%;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+    .back-link {
+        order: 1;
+    }
+
+    .park-brand {
+        order: 2;
+    }
+
+    .park-links {
+        order: 3;
+
+        width: 100%;
+
+        margin-left: 0;
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        scrollbar-width: none;
+    }
+
+    .park-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    .park-links a {
+        padding: 10px 11px;
+
+        font-size: 10px;
+    }
+
+    .park-links a::after {
+        bottom: 4px;
+    }
+
+    .park-hero {
+        grid-template-columns: 1fr;
+
+        padding: 60px 6%;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 650px;
+
+        margin: auto;
+    }
+
+    .location {
+        justify-content: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image {
+        margin: auto;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .park-nav {
+        padding: 10px 4%;
+    }
+
+    .back-link span {
+        display: none;
+    }
+
+    .back-link {
+        width: 34px;
+        height: 34px;
+
+        padding: 0;
+
+        justify-content: center;
+    }
+
+    .park-logo {
+        width: 34px;
+        height: 34px;
+
+        font-size: 14px;
+    }
+
+    .park-brand strong {
+        font-size: 12px;
+    }
+
+    .park-brand span {
+        font-size: 8px;
+    }
+
+    .park-links {
+        margin-top: 2px;
+    }
+
+    .park-links a {
+        padding: 9px 10px;
+
+        font-size: 9px;
+    }
+
+    .park-hero {
+        min-height: auto;
+
+        padding: 55px 6%;
+    }
+
+    .park-hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-description {
+        font-size: 11px;
+    }
+
+    .hero-image img {
+        height: 240px;
+    }
+
+    .park-overview {
+        padding: 60px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overview-card {
+        min-height: 220px;
+    }
+
+}
